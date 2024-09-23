@@ -1,5 +1,6 @@
 const Register = require('../Model/Signup_model')
-const bcrypt  = require("bcrypt")
+const bcrypt = require('bcryptjs');
+
 const Register_controller = async (req,res)=>{
 try{
 const useremail = await Register.findOne({email:req.body.email})

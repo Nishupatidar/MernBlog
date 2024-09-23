@@ -1,6 +1,7 @@
 const userregister = require("../Model/Signup_model")
 const login = require('../Model/Admin_login')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs');
+
 const jwt = require('jsonwebtoken')
 const Login_controller =async (req,res)=>{
   console.log(req.body)
