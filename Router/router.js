@@ -1,5 +1,5 @@
 const express = require('express')
-const bcryptjs = require('bcryptjs')
+const bcrypt = require('bcryptjs')
 const multer = require('multer')
 const Register_controller = require('../Controller/Register_controller')
 const {User_details_controller, Delete_user_details, Edit_user_details, Update_user} = require('../Controller/User_details')

@@ -4,7 +4,7 @@ const categories = require('../Model/Category')
 const Register = require('../Model/Signup_model')
 const slugify = require('slugify')
 const Blog = require('../Model/Add_Blog')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 const Api_get_controller =async (req,res)=>{
 const apidata = await Apiget.find()
 console.log(apidata)
