@@ -1,5 +1,7 @@
 const express = require('express')
 const path = require('path')
+const bcryptjs = require('bcryptjs')
+
 const router = require('./Router/router')
 const app = express()
 const sidebar = require('./Model/Sidebar')

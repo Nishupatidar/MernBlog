@@ -1,5 +1,5 @@
 const User_Register = require('../Model/Signup_model')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 const User_details_controller = async (req, res) => {
     try {
         const User_details = await User_Register.find({})
