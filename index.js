@@ -34,6 +34,6 @@ app.use('/assets', express.static('public', {
 //   const updated = raw.replace("__PAGE_META__", `<title>${pageTitle}</title>`)
 //   res.send(updated)
 // })
-app.listen(process.env.PORT||4000,()=>{
+app.listen(process.env.PORT || 10000,()=>{
     console.log(`Server Runing Port ${process.env.PORT}`)
 })

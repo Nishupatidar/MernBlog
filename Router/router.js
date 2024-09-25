@@ -51,6 +51,9 @@ const uploadFields = upload.fields([{name:"images"},{name:"newimage"},{name:"upl
   // const upload = multer({storage:storage,limits: { fileSize: maxSize }})
   // .fields([{name:"image"},{name:"newimage"},{name:"uploadfile"}])
   // console.log(upload)
+  router.get("/",(req,res)=>{
+    res.send("hello")
+  })
 router.post("/signup",Register_controller)
 router.post("/login",Login_controller)
 router.get("/userdetails",User_details_controller)
