@@ -12,7 +12,12 @@ const role_permission = require('./Model/role_permission')
 require('dotenv').config()
 const cors = require('cors')
 
-app.use(cors())
+
+app.use(cors({
+  origin: 'https://mernfront-4-4ro1.onrender.com', // Frontend URL
+  credentials: true
+}));
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(router)
@@ -27,6 +32,7 @@ app.use('/assets', express.static('public', {
       }
     },
   }));
+  
 // const pathToIndex = path.join(__dirname, "build/index.html")
 // app.get('/',(req,res)=>{
 //     const raw = fs.readFileSync(pathToIndex)
@@ -37,3 +43,6 @@ app.use('/assets', express.static('public', {
 app.listen(process.env.PORT || 10000,()=>{
     console.log(`Server Runing Port ${process.env.PORT}`)
 })
+app.get("/", (req, res) => {
+  res.send("hello");
+});
